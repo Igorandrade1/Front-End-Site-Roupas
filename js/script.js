@@ -48,3 +48,47 @@ const mobileNavbar = new MobileNavbar (
 mobileNavbar.init();
 
 
+
+
+const items = [
+    {
+        id: 0,
+        nome: 'camiseta',
+        img: 'placeholder.png',
+        quantidade: 0
+    },
+
+    {
+        id: 1,
+        nome: 'short',
+        img: 'placeholder.png',
+        quantidade: 0
+    },
+
+    {
+        id: 2,
+        nome: 'boné',
+        img: 'placeholder.png',
+        quantidade: 0
+    },
+]
+
+
+inicializarLoja = () => {
+    var containerProdutos = document.getElementById('produtos');
+    items.map((val) => {
+        containerProdutos.innerHTML += `
+        
+        <div class="produto">
+            <img src="`+val.img+`" />
+            <p>`+val.nome+`</p>
+            <a href=""></a>
+
+        </div>
+        
+        `
+    }
+    )}
+
+
+inicializarLoja();
